@@ -77,24 +77,23 @@ WSGI_APPLICATION = 'eaglefs.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
-}
-
 #DATABASES = {
  #   'default': {
-  #      'ENGINE': 'django.db.backends.postgresql',
-   #     'NAME': 'dcdr7md97ilnqn',
-    #    'USER': 'dxowwubyolczgu',
-     #   'PASSWORD': '00837191b2f755db01a80dc903755ea69d76f9946b8a397e75b1f0b99a63085c',
-      #  'HOST': 'ec2-54-83-55-122.compute-1.amazonaws.com',
-       # 'PORT': '5432',
+  #      'ENGINE': 'django.db.backends.sqlite3',
+   #     'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     #}
 #}
 
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'dcdr7md97ilnqn',
+        'USER': 'dxowwubyolczgu',
+        'PASSWORD': '00837191b2f755db01a80dc903755ea69d76f9946b8a397e75b1f0b99a63085c',
+        'HOST': 'ec2-54-83-55-122.compute-1.amazonaws.com',
+        'PORT': '5432',
+    }
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/2.2/ref/settings/#auth-password-validators
