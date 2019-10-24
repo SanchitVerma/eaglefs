@@ -1,0 +1,80 @@
+{% extends 'portfolio/base.html' %}
+{% load staticfiles %}
+{% block content %}
+            {% if user.is_authenticated %}
+                <div class="page-container">
+
+                    <h2 class="top-menu">Hello {{ user.username }},</h2>
+                    <body style="background-color:#000606;">
+                       <img src="{% static "images/home.jpg" %}" width="1200" height="400">
+                       </body>
+                    <p><br><b>Please choose from below options.</b></p>
+
+                </div>
+            {% endif %}
+            <div class="content container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="links">
+                            <!-- Example row of columns -->
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <div class="thumbnail">
+                                        <img src="{% static "images/customer.jpg" %}" alt="customer"
+                                        style="width:300px;height:150px;"/>
+                                        <div class="caption">
+                                            <h2>Customers</h2>
+                                            <p>We see our success in our customers success, it gives us an immense
+                                                pleasure when our advises turn out to be fruitful. </p>
+
+                                            <p><a class="btn btn-primary" href="{% url 'portfolio:customer_list' %}"
+                                                  role="button">View
+                                                Customers &raquo;</a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="thumbnail">
+                                        <img src= "{% static "images/nonstock.jpg" %}" alt="non-stock"
+                                        style="width:300px;height:150px;"/>
+                                        <div class="caption">
+                                            <h2>Non-Stock Investments</h2>
+                                            <p>Our team also provides advises for Non-Stock investments.</p>
+                                            <p><a class="btn btn-primary" href="{% url 'portfolio:investment_list' %}"
+                                                  role="button">View
+                                                Non-Stocks &raquo;</a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="thumbnail">
+                                        <img src="{% static "images/stocks.jpg" %}" alt="stocks"
+                                        style="width:300px;height:150px;"/>
+                                        <div class="caption">
+                                            <h2>Stocks</h2>
+                                            <p>Our Stock portfolios (Eagle Financial Stock) vary across industries based on thier stock Values.
+                                                Which gives us immense pleasure</p>
+                                            <p><a class="btn btn-primary" href="{% url 'portfolio:stock_list' %}"
+                                                  role="button">View
+                                                Stocks &raquo;</a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="thumbnail">
+                                        <img src="{% static "images/mutualfund.jpg" %}" alt="mutualfunds"
+                                        style="width:300px;height:150px;"/>
+                                        <div class="caption">
+                                            <h2>Mutual Fund Portfolio</h2>
+                                            <p>Our Mutual Fund portfolios vary across industries.</p>
+                                            <p><a class="btn btn-primary" href="{% url 'portfolio:mutualfund_list' %}" role="button">View
+                                                Mutual-Funds &raquo;</a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+{% endblock %}
