@@ -82,13 +82,20 @@ WSGI_APPLICATION = 'efs.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.0/ref/settings/#databases
 
+#DATABASES = {
+ #   'default': {
+  #      'ENGINE': 'django.db.backends.sqlite3',
+   #     'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    #}
+#}
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'dchjodnd1pl293',
-        'USER': 'wlkqunpwikkzdk',
-        'PASSWORD': '3fd6dbff550aebcd6d5f9a8300417f7744ebfa0595e63d3030c399a3c2dd49e3',
-        'HOST': 'ec2-174-129-41-127.compute-1.amazonaws.com',
+        'NAME': 'dcdr7md97ilnqn',
+        'USER': 'dxowwubyolczgu',
+        'PASSWORD': '00837191b2f755db01a80dc903755ea69d76f9946b8a397e75b1f0b99a63085c',
+        'HOST': 'ec2-54-83-55-122.compute-1.amazonaws.com',
         'PORT': '5432',
     }
 }
